@@ -1,0 +1,24 @@
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(to right, #f2eb1b, #f7c80e);">
+    <div class="container">
+        <a routerLink="" (click)="refresh()" class="navbar-brand" style="color: black; font-size: 30px; font-weight: 750; font-family: Brush Script MT ;"> Eat Up</a>
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" style="color: rgb(255, 255, 255); font-size: 18px; font-weight: 750; font-family: Verdana, Geneva, Tahoma, sans-serif;" routerLink="/home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="color: rgb(255, 255, 255); font-size: 18px; font-weight: 550; font-family: Verdana, Geneva, Tahoma, sans-serif;" routerLink="/admin">Admin</a>
+            </li>
+            <li class="nav-item">
+                <div *ngIf="isUserLoggedIn; else isLogOut">
+                      <a class="nav-link" style="color: rgb(255, 255, 255); font-size: 18px; font-weight: 550; font-family: Verdana, Geneva, Tahoma, sans-serif;" routerLink="/logout">Logout</a>
+                </div>
+                <ng-template #isLogOut>
+                            <a class="nav-link" style="color: rgb(255, 255, 255); font-size: 18px; font-weight: 550; font-family: Verdana, Geneva, Tahoma, sans-serif;" routerLink="/login">Logout</a>
+                </ng-template>
+    </li>
+        </ul>
+    </div>
+</nav>
+
+<router-outlet></router-outlet>

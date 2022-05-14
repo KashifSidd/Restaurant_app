@@ -1,0 +1,59 @@
+<!-- Page Content -->
+
+<!-- Home Page Filters and Serach -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="navbar-brand" style="color: black; font-size: 26px; font-weight: 750; font-family: Brush Script MT ;" >Restuarants</div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <button class="btn btn-success"  (click) ="getOnlyVeg()">Only Veg</button>
+        </li>
+        <li class="nav-item">
+          <button class="btn btn-danger"  (click) ="getNonVeg()">Non Veg</button>
+        </li>
+        <div class="nav-item">
+          <button class="btn btn-blue"  (click) ="clear()">Clear Fliters</button>
+        </div>
+      </ul>
+      
+        <input class="form-control sm searchinput" type="search" placeholder="Category Search"  name="search" #search>
+        <button class="btn btn-success" (click)="searchRestuarant(search.value)">Search</button>
+    </div>
+  </div>
+</nav>
+
+
+<!-- Home page Content -->
+<!-- Card design  -->
+<div>
+   <div class="text-center mt-3">
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+<div class="container-fluid d-flex">
+<div class="card"  *ngFor="let restuarant of restuarants$ | async | paginate: { itemsPerPage: 10, currentPage: p }">
+   <img src="{{restuarant.imgUrl}}" class="card-img-top" alt="...">
+   <div class="card-body">
+     <h5 class="card-title">{{ restuarant.name }}</h5>
+     <p class="card-text">{{ restuarant.id}}</p>
+   </div>
+   <ul class="list-group list-group-flush">
+     <li class="list-group-item">{{ restuarant.type }}</li>
+     <li class="list-group-item">{{ restuarant.category }}</li>
+     <li class="list-group-item">{{ restuarant.location }}</li>
+     <li class="list-group-item">{{ restuarant.rating }}</li>
+     <li class="list-group-item">{{ restuarant.price }}</li>
+   </ul>
+ </div>
+</div>
+<div class="text-center mt-3">
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
+</div>
+
+<!-- card design -->
+
+            
+
+
+  

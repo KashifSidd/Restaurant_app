@@ -1,0 +1,50 @@
+<div class="container row">
+<div class="container-fluid col-md-6">
+<!-- Add Restuarant Component -->
+<app-add-restuarant></app-add-restuarant>
+</div>
+<!-- Page Content -->
+
+<div class="container-fluid col-md-6"> 
+  <div class="row"> 
+     <div class="col-md-12 text-center" style="padding-top: 20px;">
+        <div class="container" style="padding-left: 0px; padding-right: 0px;"> 
+           <div class="row"> 
+              <div class="col-sm" style="text-align: left;"> 
+                 {{ title }} 
+              </div>  
+           </div> 
+        </div> 
+        <div class="container-fluid d-flex" style="margin-top: 10px;"> 
+           <table class="table table-striped"> 
+              <thead> 
+                 <tr> 
+                    <th>ID</th> 
+                    <th>Name</th> 
+                    <th>Veg</th> 
+                    <th>Category</th> 
+                    <th>Location</th> 
+                    <th>Price</th> 
+                    <th>Ratings</th> 
+                    <th>Action</th> 
+                 </tr> 
+              </thead> 
+              <tbody> 
+                 <tr *ngFor="let restuarant of restuarants$ | async; let i = index"> 
+                    <th scope="row">{{ restuarant.id}}</th> 
+                    <th>{{ restuarant.name }}</th> 
+                    <td>{{ restuarant.type }}</td> 
+                    <td>{{ restuarant.category }}</td> 
+                    <td>{{ restuarant.location }}</td> 
+                    <td>{{ restuarant.price }}</td> 
+                    <td>{{ restuarant.rating }}</td> 
+                    <td><button class="btn btn-primary" (click) = "removeRestuarant(i)">Remove</button></td> 
+                 </tr> 
+              </tbody> 
+           </table> 
+        </div> 
+     </div> 
+  </div> 
+</div>
+</div>
+

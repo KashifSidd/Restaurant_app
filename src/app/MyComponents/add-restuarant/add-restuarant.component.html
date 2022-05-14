@@ -1,0 +1,41 @@
+<form class="container row mt-3">
+  <div class="input-group">
+    <span class="input-group-text">Restuarant Name</span> 
+    <input type="text" class="form-control"  value="" #name required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Category</span> 
+    <input type="text" class="form-control"  value=""  #category required>
+  </div>
+  <div class="input-group">
+   <span class="input-group-text">City</span>
+    <input type="text" class="form-control"  #location required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Type</span>
+    <select class="form-select" #type required>
+      <option selected disabled value="">Choose...</option>
+      <option>VEG</option>
+      <option>NON-VEG</option>
+    </select>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Price</span>
+    <input type="text" class="form-control"  #price required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Rating</span>
+    <input type="text" class="form-control"  #rating required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Image URL</span>
+      <input type="text" class="form-control"  #imageUrl required>
+  </div>
+  <div class="input-group">
+    <span class="input-group-text">Added On</span>
+    <input type="date" class="form-control"  #createdOn required>
+  </div>
+  <div class="text-center">
+    <button class="btn btn-primary mt-3" type="button" (click)="addRestuarant(name.value, category.value, type.value, imageUrl.value, location.value, price.value, rating.value, createdOn.value)">Add Restuarant</button>
+  </div>
+</form>

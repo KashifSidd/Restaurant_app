@@ -1,0 +1,22 @@
+.form-signin {
+   max-width: 400px;
+   padding: 10px;
+   margin: 0 auto;
+}
+
+input {
+   margin-bottom: 12px;
+   margin-top: 12px;
+}
+.page{
+  background: #d9a7c7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #fff7a4, #fff833);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #fff8b0, #fff642); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+}
+.footer{
+  background: #03001e;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #fdeff9, #ec38bc, #7303c0, #03001e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
